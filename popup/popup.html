@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Site Security Inspector</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="banner">
+    <div class="banner-top">
+      <span class="dot" id="score-dot"></span>
+      <span class="brand">Security Inspector</span>
+    </div>
+    <div class="score-row">
+      <div class="score-num" id="score-num">--</div>
+      <div class="score-meta">
+        <div class="score-label" id="score-label">Scanning…</div>
+        <div class="score-domain" id="score-domain">&nbsp;</div>
+      </div>
+    </div>
+  </header>
+
+  <main id="checks">
+    <p class="loading" id="loading-text">Running checks on this tab…</p>
+  </main>
+
+  <footer>
+    <button id="rescan-btn">Rescan this page</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

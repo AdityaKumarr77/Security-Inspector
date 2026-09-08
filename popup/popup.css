@@ -1,0 +1,194 @@
+/* Design tokens
+   base:      #12161C  deep charcoal-navy
+   panel:     #1A2029
+   line:      #262E39
+   text:      #E8ECF1
+   muted:     #7C8896
+   safe:      #3FB88F
+   warn:      #E8A33D
+   danger:    #E15554
+   Type: Inter (labels/body) + JetBrains Mono (scores, technical values)
+*/
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), local("Helvetica Neue"), local("Arial");
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 360px;
+  max-height: 560px;
+  overflow-y: auto;
+  background: #12161c;
+  color: #e8ecf1;
+  font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.banner {
+  padding: 16px 18px 18px;
+  border-bottom: 1px solid #262e39;
+  background: linear-gradient(180deg, #171d25 0%, #12161c 100%);
+}
+
+.banner-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7c8896;
+  flex-shrink: 0;
+}
+.dot.safe { background: #3fb88f; }
+.dot.warn { background: #e8a33d; }
+.dot.danger { background: #e15554; }
+
+.brand {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #7c8896;
+}
+
+.score-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.score-num {
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+  color: #e8ecf1;
+  min-width: 64px;
+}
+
+.score-meta { min-width: 0; }
+
+.score-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.score-domain {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: #7c8896;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main { padding: 4px 0 8px; }
+
+.loading {
+  padding: 24px 18px;
+  color: #7c8896;
+  text-align: center;
+  font-size: 13px;
+}
+
+.check {
+  border-left: 3px solid #262e39;
+  padding: 10px 18px 10px 15px;
+  border-bottom: 1px solid #1c222b;
+  cursor: pointer;
+}
+.check.safe { border-left-color: #3fb88f; }
+.check.warn { border-left-color: #e8a33d; }
+.check.danger { border-left-color: #e15554; }
+.check.neutral { border-left-color: #3a4452; }
+
+.check-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.check-title {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.check-status {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  color: #7c8896;
+  flex-shrink: 0;
+}
+.check.safe .check-status { color: #3fb88f; }
+.check.warn .check-status { color: #e8a33d; }
+.check.danger .check-status { color: #e15554; }
+
+.check-summary {
+  color: #7c8896;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.check-detail {
+  display: none;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #262e39;
+  font-size: 12px;
+  color: #c3ccd6;
+}
+.check.open .check-detail { display: block; }
+
+.check-detail ul {
+  margin: 6px 0 0;
+  padding-left: 16px;
+}
+.check-detail li {
+  margin-bottom: 3px;
+  word-break: break-all;
+}
+
+.check-detail .perm-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+}
+.perm-state {
+  font-weight: 600;
+}
+.perm-state.granted { color: #e8a33d; }
+.perm-state.denied { color: #3fb88f; }
+.perm-state.prompt { color: #7c8896; }
+.perm-state.unsupported { color: #3a4452; }
+
+footer {
+  padding: 12px 18px 16px;
+  border-top: 1px solid #262e39;
+}
+
+#rescan-btn {
+  width: 100%;
+  padding: 9px 0;
+  background: #1a2029;
+  color: #e8ecf1;
+  border: 1px solid #2c3542;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#rescan-btn:hover { background: #212936; border-color: #3a4452; }
+#rescan-btn:active { background: #171d25; }
