@@ -66,8 +66,11 @@ Disclaimer :- Use it at your own risk .The developer will not be responsible for
 Developed By:- ADITYA KUMAR JHA
 
 You can follow me on:-
+
 https://www.linkedin.com/in/adityakumarjha999
-in/adityakumarjha999
-https://www.salesforce.com/trailblazer/profile
+
 https://unstop.com/u/technadi29148
+
 https://leetcode.com/u/AdityaKumar77/
+
+https://www.instagram.com/devilbuoy757/
